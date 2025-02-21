@@ -20,7 +20,7 @@ pipeline {
                 source jenkins_venv/bin/activate
 
                 # Install dependencies
-                pip install scikit-learn pytest
+                pip install scikit-learn pytest pandas
 
                 # TODO Complete the command to run pytest
                 pytest
