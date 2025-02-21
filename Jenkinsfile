@@ -15,8 +15,12 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # TODO fill out the path to conda here
-                source mlip_lab_6/bin/activate
+                # TODO fill out the path to conda/venv here
+                python3 -m venv jenkins_venv
+                source jenkins_venv/bin/activate
+
+                # Install dependencies
+                pip install scikit-learn pytest
 
                 # TODO Complete the command to run pytest
                 pytest
